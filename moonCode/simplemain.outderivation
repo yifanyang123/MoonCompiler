@@ -1,0 +1,1544 @@
+<START> ::= <prog> 
+current STACK:[$, <prog>]
+current input:id
+nextInput:(
+<prog> ::= <rept-classDecl> 2 <rept-funcDef> 3 'main' <funcBody> 4
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 2, <rept-classDecl>]
+current input:id
+nextInput:(
+<rept-classDecl> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 2]
+current input:id
+nextInput:(
+<rept-funcDef> ::= <funcDef> <rept-funcDef> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, <funcDef>]
+current input:id
+nextInput:(
+<funcDef> ::= <funcHead> <funcBody> ';' 18
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <funcHead>]
+current input:id
+nextInput:(
+<funcHead> ::= 11 'id' <kFuncHead> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <kFuncHead>, 'id', 11]
+current input:id
+nextInput:(
+<kFuncHead> ::= '(' <fParams> ')' ':' <tFuncHead> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', <fParams>, '(']
+current input:(
+nextInput:integer
+<fParams> ::= 14 <type> 14 'id' <rept-arraySize> 15 16 <rept-fParamsTail> 17
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, <type>, 14]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15]
+current input:,
+nextInput:integer
+<rept-fParamsTail> ::= <fParamsTail> <rept-fParamsTail> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, <fParamsTail>]
+current input:,
+nextInput:integer
+<fParamsTail> ::= ',' 14 <type> 14 'id' <rept-arraySize> 15 16
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, <type>, 14, ',']
+current input:,
+nextInput:integer
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15]
+current input:)
+nextInput::
+<rept-fParamsTail> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17]
+current input:)
+nextInput::
+<tFuncHead> ::= 11 <type> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <type>, 11]
+current input:integer
+nextInput:inlinecmt
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, 'integer']
+current input:integer
+nextInput:inlinecmt
+<funcBody> ::= <opt-funcBody> 'do' <rept-statement> 19 'end' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <opt-funcBody>]
+current input:local
+nextInput:inlinecmt
+<opt-funcBody> ::= 'local' <rept-varDecl> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, 'local']
+current input:local
+nextInput:inlinecmt
+<rept-varDecl> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do']
+current input:do
+nextInput:return
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement>]
+current input:return
+nextInput:(
+<statement> ::= 'return' '(' <expr> ')' 35 26 ';' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <expr>, '(', 'return']
+current input:return
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:*
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:*
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:*
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:*
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:*
+nextInput:id
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:*
+nextInput:id
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:*
+nextInput:id
+<rightrec-term> ::= 37 <multOp> <factor> 30 <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor>, <multOp>, 37]
+current input:*
+nextInput:id
+<multOp> ::= '*' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor>, '*']
+current input:*
+nextInput:id
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:;
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor1>, 46, 42, 45]
+current input:)
+nextInput:;
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19]
+current input:end
+nextInput:;
+<rept-funcDef> ::= <funcDef> <rept-funcDef> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, <funcDef>]
+current input:id
+nextInput:(
+<funcDef> ::= <funcHead> <funcBody> ';' 18
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <funcHead>]
+current input:id
+nextInput:(
+<funcHead> ::= 11 'id' <kFuncHead> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <kFuncHead>, 'id', 11]
+current input:id
+nextInput:(
+<kFuncHead> ::= '(' <fParams> ')' ':' <tFuncHead> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', <fParams>, '(']
+current input:(
+nextInput:integer
+<fParams> ::= 14 <type> 14 'id' <rept-arraySize> 15 16 <rept-fParamsTail> 17
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, <type>, 14]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15]
+current input:)
+nextInput::
+<rept-fParamsTail> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17]
+current input:)
+nextInput::
+<tFuncHead> ::= 11 <type> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <type>, 11]
+current input:integer
+nextInput:inlinecmt
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, 'integer']
+current input:integer
+nextInput:inlinecmt
+<funcBody> ::= <opt-funcBody> 'do' <rept-statement> 19 'end' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <opt-funcBody>]
+current input:local
+nextInput:integer
+<opt-funcBody> ::= 'local' <rept-varDecl> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, 'local']
+current input:local
+nextInput:integer
+<rept-varDecl> ::= <varDecl> <rept-varDecl> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, <varDecl>]
+current input:integer
+nextInput:id
+<varDecl> ::= 20 <type> 20 'id' <rept-arraySize> 21 22 ';' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, <type>, 20]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21]
+current input:;
+nextInput:do
+<rept-varDecl> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do']
+current input:do
+nextInput:id
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement>]
+current input:id
+nextInput:=
+<statement> ::= 32 'id' <statement0> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement0>, 'id', 32]
+current input:id
+nextInput:=
+<statement0> ::= 51 <rept-indice> 45 42 46 <statement01> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement01>, 46, 42, 45, <rept-indice>, 51]
+current input:=
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement01>, 46, 42, 45]
+current input:=
+nextInput:intNum
+<statement01> ::= 44 <assignOp> <expr> 29 ';' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <expr>, <assignOp>, 44]
+current input:=
+nextInput:intNum
+<assignOp> ::= '=' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <expr>, '=']
+current input:=
+nextInput:intNum
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <tExpr>, <arithExpr>]
+current input:intNum
+nextInput:;
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:intNum
+nextInput:;
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:;
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>]
+current input:;
+nextInput:inlinecmt
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29, <tExpr>]
+current input:;
+nextInput:inlinecmt
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 29]
+current input:;
+nextInput:inlinecmt
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement>]
+current input:return
+nextInput:(
+<statement> ::= 'return' '(' <expr> ')' 35 26 ';' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <expr>, '(', 'return']
+current input:return
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:(
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:(
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:(
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:(
+<tidnest> ::= 51 '(' <aParams> ')' 45 43 47 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <aParams>, '(', 51]
+current input:(
+nextInput:id
+<aParams> ::= <expr> <rept-aParamsTail> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <expr>]
+current input:id
+nextInput:)
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <arithExpr>]
+current input:id
+nextInput:)
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:)
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:)
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:*
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:)
+nextInput:*
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:*
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:*
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>]
+current input:)
+nextInput:*
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>]
+current input:)
+nextInput:*
+<rept-aParamsTail> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')']
+current input:)
+nextInput:*
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:*
+nextInput:id
+<rightrec-term> ::= 37 <multOp> <factor> 30 <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor>, <multOp>, 37]
+current input:*
+nextInput:id
+<multOp> ::= '*' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor>, '*']
+current input:*
+nextInput:id
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:;
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, <factor1>, 46, 42, 45]
+current input:)
+nextInput:;
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 30, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19]
+current input:end
+nextInput:;
+<rept-funcDef> ::= <funcDef> <rept-funcDef> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, <funcDef>]
+current input:id
+nextInput:(
+<funcDef> ::= <funcHead> <funcBody> ';' 18
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <funcHead>]
+current input:id
+nextInput:(
+<funcHead> ::= 11 'id' <kFuncHead> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <kFuncHead>, 'id', 11]
+current input:id
+nextInput:(
+<kFuncHead> ::= '(' <fParams> ')' ':' <tFuncHead> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', <fParams>, '(']
+current input:(
+nextInput:integer
+<fParams> ::= 14 <type> 14 'id' <rept-arraySize> 15 16 <rept-fParamsTail> 17
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, <type>, 14]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15, <rept-arraySize>, 'id', 14, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17, <rept-fParamsTail>, 16, 15]
+current input:)
+nextInput::
+<rept-fParamsTail> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <tFuncHead>, ':', ')', 17]
+current input:)
+nextInput::
+<tFuncHead> ::= 11 <type> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, <type>, 11]
+current input:integer
+nextInput:local
+<type> ::= 'integer' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', <funcBody>, 'integer']
+current input:integer
+nextInput:local
+<funcBody> ::= <opt-funcBody> 'do' <rept-statement> 19 'end' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <opt-funcBody>]
+current input:local
+nextInput:do
+<opt-funcBody> ::= 'local' <rept-varDecl> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do', <rept-varDecl>, 'local']
+current input:local
+nextInput:do
+<rept-varDecl> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, 'do']
+current input:do
+nextInput:return
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, <statement>]
+current input:return
+nextInput:(
+<statement> ::= 'return' '(' <expr> ')' 35 26 ';' 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <expr>, '(', 'return']
+current input:return
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:)
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:)
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:)
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:;
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:)
+nextInput:;
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19, <rept-statement>, ';', 26, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3, <rept-funcDef>, 18, ';', 'end', 19]
+current input:end
+nextInput:;
+<rept-funcDef> ::= EPSILON 
+current STACK:[$, 4, <funcBody>, 'main', 3]
+current input:main
+nextInput:local
+<funcBody> ::= <opt-funcBody> 'do' <rept-statement> 19 'end' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <opt-funcBody>]
+current input:local
+nextInput:integer
+<opt-funcBody> ::= 'local' <rept-varDecl> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, 'local']
+current input:local
+nextInput:integer
+<rept-varDecl> ::= <varDecl> <rept-varDecl> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, <varDecl>]
+current input:integer
+nextInput:id
+<varDecl> ::= 20 <type> 20 'id' <rept-arraySize> 21 22 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, <type>, 20]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21]
+current input:;
+nextInput:inlinecmt
+<rept-varDecl> ::= <varDecl> <rept-varDecl> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, <varDecl>]
+current input:integer
+nextInput:id
+<varDecl> ::= 20 <type> 20 'id' <rept-arraySize> 21 22 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, <type>, 20]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21]
+current input:;
+nextInput:inlinecmt
+<rept-varDecl> ::= <varDecl> <rept-varDecl> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, <varDecl>]
+current input:integer
+nextInput:id
+<varDecl> ::= 20 <type> 20 'id' <rept-arraySize> 21 22 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, <type>, 20]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21]
+current input:;
+nextInput:inlinecmt
+<rept-varDecl> ::= <varDecl> <rept-varDecl> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, <varDecl>]
+current input:integer
+nextInput:id
+<varDecl> ::= 20 <type> 20 'id' <rept-arraySize> 21 22 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, <type>, 20]
+current input:integer
+nextInput:id
+<type> ::= 'integer' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, 'id', 20, 'integer']
+current input:integer
+nextInput:id
+<rept-arraySize> ::= <arraySize> <rept-arraySize> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, <arraySize>]
+current input:[
+nextInput:intNum
+<arraySize> ::= '[' <tarraySize> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, <tarraySize>, '[']
+current input:[
+nextInput:intNum
+<tarraySize> ::= 13 'intNum' ']' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21, <rept-arraySize>, ']', 'intNum', 13]
+current input:intNum
+nextInput:]
+<rept-arraySize> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do', <rept-varDecl>, ';', 22, 21]
+current input:;
+nextInput:inlinecmt
+<rept-varDecl> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, 'do']
+current input:do
+nextInput:id
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:id
+nextInput:=
+<statement> ::= 32 'id' <statement0> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement0>, 'id', 32]
+current input:id
+nextInput:=
+<statement0> ::= 51 <rept-indice> 45 42 46 <statement01> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement01>, 46, 42, 45, <rept-indice>, 51]
+current input:=
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement01>, 46, 42, 45]
+current input:=
+nextInput:intNum
+<statement01> ::= 44 <assignOp> <expr> 29 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <expr>, <assignOp>, 44]
+current input:=
+nextInput:intNum
+<assignOp> ::= '=' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <expr>, '=']
+current input:=
+nextInput:intNum
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <arithExpr>]
+current input:intNum
+nextInput:+
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:intNum
+nextInput:+
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:+
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:+
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>]
+current input:+
+nextInput:intNum
+<rightrec-arithExpr> ::= 33 <addOp> <term> 34 <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <term>, <addOp>, 33]
+current input:+
+nextInput:intNum
+<addOp> ::= '+' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <term>, '+']
+current input:+
+nextInput:intNum
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:*
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:*
+<rightrec-term> ::= 37 <multOp> <factor> 30 <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 30, <factor>, <multOp>, 37]
+current input:*
+nextInput:intNum
+<multOp> ::= '*' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 30, <factor>, '*']
+current input:*
+nextInput:intNum
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 30, 'intNum', 32]
+current input:intNum
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34]
+current input:;
+nextInput:inlinecmt
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>]
+current input:;
+nextInput:inlinecmt
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29]
+current input:;
+nextInput:inlinecmt
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:read
+nextInput:(
+<statement> ::= 'read' '(' <variable> ')' 35 24 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 24, 35, ')', <variable>, '(', 'read']
+current input:read
+nextInput:(
+<variable> ::= 32 'id' <variable0> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 24, 35, ')', <variable0>, 'id', 32]
+current input:id
+nextInput:)
+<variable0> ::= 51 <rept-indice> 45 42 46 <variable1> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 24, 35, ')', <variable1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:;
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 24, 35, ')', <variable1>, 46, 42, 45]
+current input:)
+nextInput:;
+<variable1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 24, 35, ')', 44]
+current input:)
+nextInput:;
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:if
+nextInput:(
+<statement> ::= 'if' '(' <relExpr> ')' 49 'then' 48 <statBlock> 50  'else' 48 <statBlock> 50 52 23 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', <relExpr>, '(', 'if']
+current input:if
+nextInput:(
+<relExpr> ::= <arithExpr> 32 <relOp> <arithExpr> 31
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <arithExpr>]
+current input:id
+nextInput:gt
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:gt
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:gt
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:gt
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:gt
+nextInput:id
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:gt
+nextInput:id
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:gt
+nextInput:id
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>]
+current input:gt
+nextInput:id
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, <relOp>, 32]
+current input:gt
+nextInput:id
+<relOp> ::= 'gt' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <arithExpr>, 'gt']
+current input:gt
+nextInput:id
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:+
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:+
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:+
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:+
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:+
+nextInput:intNum
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:+
+nextInput:intNum
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>]
+current input:+
+nextInput:intNum
+<rightrec-arithExpr> ::= 33 <addOp> <term> 34 <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, 34, <term>, <addOp>, 33]
+current input:+
+nextInput:intNum
+<addOp> ::= '+' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, 34, <term>, '+']
+current input:+
+nextInput:intNum
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, 34, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:)
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, 34, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:)
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31, <rightrec-arithExpr>, 34]
+current input:)
+nextInput:inlinecmt
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statBlock>, 48, 'then', 49, ')', 31]
+current input:)
+nextInput:inlinecmt
+<statBlock> ::= <statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, <statement>]
+current input:write
+nextInput:(
+<statement> ::= 'write' '(' <expr> ')' 35 25 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <expr>, '(', 'write']
+current input:write
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:+
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:+
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:+
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:+
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:+
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:+
+nextInput:intNum
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:+
+nextInput:intNum
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:+
+nextInput:intNum
+<rightrec-arithExpr> ::= 33 <addOp> <term> 34 <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <term>, <addOp>, 33]
+current input:+
+nextInput:intNum
+<addOp> ::= '+' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <term>, '+']
+current input:+
+nextInput:intNum
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:)
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:)
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statBlock>, 48, 'else', 50, ';', 25, 35, ')']
+current input:)
+nextInput:;
+<statBlock> ::= <statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, <statement>]
+current input:write
+nextInput:(
+<statement> ::= 'write' '(' <expr> ')' 35 25 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <expr>, '(', 'write']
+current input:write
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:+
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:+
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:+
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:+
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:+
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:+
+nextInput:intNum
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:+
+nextInput:intNum
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:+
+nextInput:intNum
+<rightrec-arithExpr> ::= 33 <addOp> <term> 34 <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <term>, <addOp>, 33]
+current input:+
+nextInput:intNum
+<addOp> ::= '+' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <term>, '+']
+current input:+
+nextInput:intNum
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:)
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:)
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, 34]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 23, 52, 50, ';', 25, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:id
+nextInput:=
+<statement> ::= 32 'id' <statement0> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement0>, 'id', 32]
+current input:id
+nextInput:=
+<statement0> ::= 51 <rept-indice> 45 42 46 <statement01> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement01>, 46, 42, 45, <rept-indice>, 51]
+current input:=
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement01>, 46, 42, 45]
+current input:=
+nextInput:intNum
+<statement01> ::= 44 <assignOp> <expr> 29 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <expr>, <assignOp>, 44]
+current input:=
+nextInput:intNum
+<assignOp> ::= '=' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <expr>, '=']
+current input:=
+nextInput:intNum
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <arithExpr>]
+current input:intNum
+nextInput:;
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:intNum
+nextInput:;
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:;
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>]
+current input:;
+nextInput:inlinecmt
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>]
+current input:;
+nextInput:inlinecmt
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29]
+current input:;
+nextInput:inlinecmt
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:while
+nextInput:(
+<statement> ::= 'while' '(' <relExpr> ')' 49 48 <statBlock> 50 27 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', <relExpr>, '(', 'while']
+current input:while
+nextInput:(
+<relExpr> ::= <arithExpr> 32 <relOp> <arithExpr> 31
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <arithExpr>]
+current input:id
+nextInput:leq
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:leq
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:leq
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:leq
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:leq
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:leq
+nextInput:intNum
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:leq
+nextInput:intNum
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32, <rightrec-arithExpr>]
+current input:leq
+nextInput:intNum
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, <relOp>, 32]
+current input:leq
+nextInput:intNum
+<relOp> ::= 'leq' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <arithExpr>, 'leq']
+current input:leq
+nextInput:intNum
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <rightrec-arithExpr>, <term>]
+current input:intNum
+nextInput:)
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:)
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <rightrec-arithExpr>, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:)
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31, <rightrec-arithExpr>]
+current input:)
+nextInput:inlinecmt
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, <statBlock>, 48, 49, ')', 31]
+current input:)
+nextInput:inlinecmt
+<statBlock> ::= 'do' <rept-statement> 'end' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, 'do']
+current input:do
+nextInput:write
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, <statement>]
+current input:write
+nextInput:(
+<statement> ::= 'write' '(' <expr> ')' 35 25 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <expr>, '(', 'write']
+current input:write
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:)
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:)
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:)
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:;
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:)
+nextInput:;
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 25, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, <statement>]
+current input:id
+nextInput:=
+<statement> ::= 32 'id' <statement0> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, <statement0>, 'id', 32]
+current input:id
+nextInput:=
+<statement0> ::= 51 <rept-indice> 45 42 46 <statement01> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, <statement01>, 46, 42, 45, <rept-indice>, 51]
+current input:=
+nextInput:id
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, <statement01>, 46, 42, 45]
+current input:=
+nextInput:id
+<statement01> ::= 44 <assignOp> <expr> 29 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <expr>, <assignOp>, 44]
+current input:=
+nextInput:id
+<assignOp> ::= '=' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <expr>, '=']
+current input:=
+nextInput:id
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <arithExpr>]
+current input:id
+nextInput:+
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:+
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:+
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:+
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:+
+nextInput:intNum
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:+
+nextInput:intNum
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:+
+nextInput:intNum
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>]
+current input:+
+nextInput:intNum
+<rightrec-arithExpr> ::= 33 <addOp> <term> 34 <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <term>, <addOp>, 33]
+current input:+
+nextInput:intNum
+<addOp> ::= '+' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <term>, '+']
+current input:+
+nextInput:intNum
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, <factor>]
+current input:intNum
+nextInput:;
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34, <rightrec-term>, 'intNum', 32]
+current input:intNum
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, 34]
+current input:;
+nextInput:end
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29, <tExpr>]
+current input:;
+nextInput:end
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end', <rept-statement>, ';', 29]
+current input:;
+nextInput:end
+<rept-statement> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 27, 50, 'end']
+current input:end
+nextInput:;
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:id
+nextInput:=
+<statement> ::= 32 'id' <statement0> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement0>, 'id', 32]
+current input:id
+nextInput:=
+<statement0> ::= 51 <rept-indice> 45 42 46 <statement01> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement01>, 46, 42, 45, <rept-indice>, 51]
+current input:=
+nextInput:+
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement01>, 46, 42, 45]
+current input:=
+nextInput:+
+<statement01> ::= 44 <assignOp> <expr> 29 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <expr>, <assignOp>, 44]
+current input:=
+nextInput:+
+<assignOp> ::= '=' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <expr>, '=']
+current input:=
+nextInput:+
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <arithExpr>]
+current input:+
+nextInput:intNum
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:+
+nextInput:intNum
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:+
+nextInput:intNum
+<factor> ::= 39 <sign> <factor> 40
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 40, <factor>, <sign>, 39]
+current input:+
+nextInput:intNum
+<sign> ::= '+' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 40, <factor>, '+']
+current input:+
+nextInput:intNum
+<factor> ::= 32 'intNum' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 40, 'intNum', 32]
+current input:intNum
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>, <rightrec-arithExpr>]
+current input:;
+nextInput:inlinecmt
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29, <tExpr>]
+current input:;
+nextInput:inlinecmt
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 29]
+current input:;
+nextInput:inlinecmt
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:write
+nextInput:(
+<statement> ::= 'write' '(' <expr> ')' 35 25 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <expr>, '(', 'write']
+current input:write
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <arithExpr>]
+current input:not
+nextInput:id
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:not
+nextInput:id
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:not
+nextInput:id
+<factor> ::= 'not' <factor> 38
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 38, <factor>, 'not']
+current input:not
+nextInput:id
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 38, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 38, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:;
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 38, <factor1>, 46, 42, 45]
+current input:)
+nextInput:;
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 38, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:write
+nextInput:(
+<statement> ::= 'write' '(' <expr> ')' 35 25 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <expr>, '(', 'write']
+current input:write
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:(
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:(
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:(
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:(
+<tidnest> ::= 51 '(' <aParams> ')' 45 43 47 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <aParams>, '(', 51]
+current input:(
+nextInput:id
+<aParams> ::= <expr> <rept-aParamsTail> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <expr>]
+current input:id
+nextInput:,
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <arithExpr>]
+current input:id
+nextInput:,
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:,
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:,
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:,
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:,
+nextInput:id
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:,
+nextInput:id
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:,
+nextInput:id
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>]
+current input:,
+nextInput:id
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>]
+current input:,
+nextInput:id
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>]
+current input:,
+nextInput:id
+<rept-aParamsTail> ::= <aParamsTail> <rept-aParamsTail> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <aParamsTail>]
+current input:,
+nextInput:id
+<aParamsTail> ::= ',' <expr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <expr>, ',']
+current input:,
+nextInput:id
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <arithExpr>]
+current input:id
+nextInput:)
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:)
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:)
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:)
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:)
+nextInput:)
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:)
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:)
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>]
+current input:)
+nextInput:)
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>]
+current input:)
+nextInput:)
+<rept-aParamsTail> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')']
+current input:)
+nextInput:)
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= <statement> <rept-statement> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, <statement>]
+current input:write
+nextInput:(
+<statement> ::= 'write' '(' <expr> ')' 35 25 ';' 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <expr>, '(', 'write']
+current input:write
+nextInput:(
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <arithExpr>]
+current input:id
+nextInput:(
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:(
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:(
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:(
+<tidnest> ::= 51 '(' <aParams> ')' 45 43 47 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <aParams>, '(', 51]
+current input:(
+nextInput:id
+<aParams> ::= <expr> <rept-aParamsTail> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <expr>]
+current input:id
+nextInput:)
+<expr> ::= <arithExpr> <tExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <arithExpr>]
+current input:id
+nextInput:)
+<arithExpr> ::= <term> <rightrec-arithExpr> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <term>]
+current input:id
+nextInput:)
+<term> ::= <factor> <rightrec-term> 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor>]
+current input:id
+nextInput:)
+<factor> ::= 32 'id' <tidnest> <factor1>
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, <tidnest>, 'id', 32]
+current input:id
+nextInput:)
+<tidnest> ::= 51 <rept-indice> 45 42 46
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45, <rept-indice>, 51]
+current input:)
+nextInput:)
+<rept-indice> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 46, 42, 45]
+current input:)
+nextInput:)
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:)
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:)
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>, <tExpr>]
+current input:)
+nextInput:)
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')', <rept-aParamsTail>]
+current input:)
+nextInput:)
+<rept-aParamsTail> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, <factor1>, 47, 43, 45, ')']
+current input:)
+nextInput:)
+<factor1> ::= EPSILON 44
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>, <rightrec-term>, 44]
+current input:)
+nextInput:;
+<rightrec-term> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>, <rightrec-arithExpr>]
+current input:)
+nextInput:;
+<rightrec-arithExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')', <tExpr>]
+current input:)
+nextInput:;
+<tExpr> ::= EPSILON 
+current STACK:[$, 4, 'end', 19, <rept-statement>, ';', 25, 35, ')']
+current input:)
+nextInput:;
+<rept-statement> ::= EPSILON 
+current STACK:[$, 4, 'end', 19]
+current input:end
+nextInput:$
